@@ -23,7 +23,7 @@
     a {
         text-decoration: none;
     }
-    h1,h2,h3,p,b {
+    h1,h2,h3,p,b,details,summary {
         background-color: transparent;
         margin: 0px;
         padding: 0px;
@@ -277,6 +277,11 @@
         grid-area: cir;
     }
 
+    .rally-sticker{
+        width: 100%;
+        background-color: transparent;
+    }
+
 
     .card1 {
         display: grid;
@@ -339,4 +344,55 @@
         background-color: rgba(0, 0, 0, 0.042);
         padding-left: 3px;
         
+    }
+
+
+    @media screen and (max-width:768px) {
+
+        * {
+            background-color: #03dd8d;
+        }
+
+        .container{
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+
+        grid-template-rows: 33.3%, 33.3%, 33.3%,;
+
+        grid-template-areas: "w w w w w w w"
+                            "w w w w w w w"
+                            "esp esp esp esp esp esp esp"
+                            "t t t t t t t"
+                            "f f f f f f f"
+                            "s s s s s s s";
+
+        grid-gap: 5px;
+        height: 500px;
+        padding: 8px;
+        }
+
+        .container-angosto{
+        display: grid;
+        height: fit-content;
+        
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 33%, 33%, 33%;
+        grid-template-areas: "w w w"
+                            "w w w"
+                            "esp esp esp"
+                            "t t t"
+                            "f f f"
+                            "s s s"
+                            "p p p";
+        }
+
+        .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 5px;
+        /* margin: 10px; */
+        grid-template-areas: "card card";
+        gap:0px ;
+    }
+
     }
